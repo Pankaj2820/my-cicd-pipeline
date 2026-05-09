@@ -15,9 +15,6 @@ app.get('/version', (req, res) => {
   res.send('1')
 })
 
-const start = async () => {
-  await app.listen(PORT)
+app.listen(PORT, () => {
   console.log(`server started on port ${PORT}`)
-}
-
-start()
+})
